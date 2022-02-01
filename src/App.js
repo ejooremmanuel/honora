@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import AboutComponent from "./components/AboutComponent";
 import Contact from "./pages/contact";
 import { Toaster } from "react-hot-toast";
+import Messages from "./pages/Messages";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/service/:id" element={<Service />} />
         <Route exact path="/about" element={<AboutComponent />} />
         <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/admin/message" element={<Messages />} />
       </Routes>
       <Toaster />
       <Footer />
