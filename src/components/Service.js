@@ -5,7 +5,7 @@ import serviceData from "./servicesdata";
 
 const ServiceComp = (props) => {
   const { id } = useParams();
-  console.log(id, ">>>>");
+
   const filteredService = serviceData.filter((service) => {
     return service.id === id;
   });
@@ -15,7 +15,7 @@ const ServiceComp = (props) => {
       <Navbar />
       {filteredService.map((service) => {
         return (
-          <div className="single__service">
+          <div key={service.id} className="single__service">
             <div className="service__heading">
               <h3>
                 <span>Service</span>

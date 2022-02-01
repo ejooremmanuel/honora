@@ -8,7 +8,7 @@ const Services = (props) => {
     return (
       <Link to={`/service/${id}`} key={id}>
         <div className="service">
-          <span class="material-icons">{icon}</span>
+          <span className="material-icons">{icon}</span>
           <h3>{heading}</h3>
           <p>{desc.substring(0, 50)} ...Read more</p>
         </div>
