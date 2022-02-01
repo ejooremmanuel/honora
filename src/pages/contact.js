@@ -20,13 +20,13 @@ const Contact = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    submitData({ email, name, company, message });
-    setLoading(true)
-      .then(() => {
+    setLoading(true);
+    submitData({ email, name, company, message })
+      .then((data) => {
         toast.success("Message sent successfully");
         setLoading(false);
       })
-      .catch(() => {
+      .catch((err) => {
         toast.success("Error sending message");
         setLoading(false);
       });
@@ -93,6 +93,7 @@ const Contact = () => {
               setFullName(e.target.value);
             }}
             value={name}
+            required
           />
           <label>Company</label>
           <input
@@ -102,6 +103,7 @@ const Contact = () => {
               setCompany(e.target.value);
             }}
             value={company}
+            required
           />
           <label>Email Address</label>
           <input
@@ -111,6 +113,7 @@ const Contact = () => {
               setEmail(e.target.value);
             }}
             value={email}
+            required
           />
           <label>Your Message</label>
 
@@ -122,9 +125,10 @@ const Contact = () => {
             onChange={(e) => {
               setMessage(e.target.value);
             }}
+            required
             value={message}
           ></textarea>
-          {loading ? <button>Submit</button> : <button>Submitting...</button>}
+          {loading ? <button>Submitting...</button> : <button>Submit</button>}
         </form>
       </div>
     </>
