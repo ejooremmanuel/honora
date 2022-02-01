@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = "http://localhost:4000/user";
+const BASE_URL = "https://honoraback.herokuapp.com/user";
 
 export const submitData = (data) => {
   console.log(data);
