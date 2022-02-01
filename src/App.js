@@ -5,6 +5,7 @@ import Service from "./components/Service";
 import Footer from "./components/Footer";
 import AboutComponent from "./components/AboutComponent";
 import Contact from "./pages/contact";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route exact path="/about" element={<AboutComponent />} />
         <Route exact path="/contact" element={<Contact />} />
       </Routes>
+      <Toaster />
       <Footer />
     </Router>
   );

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import "./pages.style.css";
 import {
@@ -9,8 +9,28 @@ import {
   FaYoutube,
   FaTiktok,
 } from "react-icons/fa";
-
+import { submitData } from "../services/services";
+import toast from "react-hot-toast";
 const Contact = () => {
+  const [name, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [company, setCompany] = useState("");
+  const [message, setMessage] = useState("");
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    submitData({ email, name, company, message })
+      .then(() => {
+        toast.success("Message sent successfully");
+      })
+      .catch(() => {
+        toast.success("Error sending message");
+      });
+    setCompany("");
+    setEmail("");
+    setFullName("");
+    setMessage("");
+  }
   return (
     <>
       <Navbar />
@@ -23,9 +43,7 @@ const Contact = () => {
             <div className="map"></div>
             <h3>Find Us Here</h3>
             <span>Address: 4, Lugbe, Lagos Nigeria</span>
-            <a href="mailto://instagram.com/honoraconsult">
-              help@honoraconsult.com
-            </a>
+            <a href="mailto://help@honoraconsult.com">help@honoraconsult.com</a>
             <a href="tel://+2348142992539">+234 810 0021</a>
           </div>
 
@@ -62,16 +80,46 @@ const Contact = () => {
             </a>
           </div>
         </div>
-        <form action="" method="post">
+        <form onSubmit={handleSubmit}>
           <label>Full Name</label>
-          <input placeholder="First Name" type="text" />
+          <input
+            placeholder="First Name"
+            type="text"
+            onChange={(e) => {
+              setFullName(e.target.value);
+            }}
+            value={name}
+          />
           <label>Company</label>
-          <input placeholder="Your Company" type="text" />
+          <input
+            placeholder="Your Company"
+            type="text"
+            onChange={(e) => {
+              setCompany(e.target.value);
+            }}
+            value={company}
+          />
           <label>Email Address</label>
-          <input placeholder="Email Address" type="text" />
+          <input
+            placeholder="Email Address"
+            type="text"
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+            value={email}
+          />
           <label>Your Message</label>
 
-          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+            value={message}
+          ></textarea>
           <button>Submit</button>
         </form>
       </div>
