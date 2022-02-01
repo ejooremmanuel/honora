@@ -16,15 +16,19 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
-    submitData({ email, name, company, message })
+    submitData({ email, name, company, message });
+    setLoading(true)
       .then(() => {
         toast.success("Message sent successfully");
+        setLoading(false);
       })
       .catch(() => {
         toast.success("Error sending message");
+        setLoading(false);
       });
     setCompany("");
     setEmail("");
@@ -120,7 +124,7 @@ const Contact = () => {
             }}
             value={message}
           ></textarea>
-          <button>Submit</button>
+          {loading ? <button>Submit</button> : <button>Submitting...</button>}
         </form>
       </div>
     </>
