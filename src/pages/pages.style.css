@@ -350,7 +350,7 @@ table td {
   .herosection {
     background: url(../assets/hero_mobile.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     width: 100vw;
     height: 50vh;
     padding: 10px;
@@ -419,7 +419,7 @@ table td {
   }
 
   .service {
-    width: 400px;
+    width: 300px;
     height: 250px;
     grid-gap: 4px;
     font-size: medium;
@@ -475,5 +475,12 @@ table td {
     display: flex;
     flex-direction: row;
     width: 100%;
+  }
+
+  .services__container h1 {
+    color: blue;
+    margin-bottom: 16px;
+    text-align: center;
+    font-size: 24px;
   }
 }
