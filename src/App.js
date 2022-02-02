@@ -20,7 +20,7 @@ function App() {
           <Route exact path="/admin/message" element={<Messages />} />
         </Routes>
         <Toaster />
-        <Footer />
+        {/* <Footer /> */}
       </Router>
     </div>
   );

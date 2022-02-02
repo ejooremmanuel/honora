@@ -1,36 +1,43 @@
 /* eslint-disable jsx-a11y/anchor-has-content */
 import React, { useState } from "react";
 import "./components.style.css";
-import MenuIcon from "./MenuIcon";
-import CloseIcon from "./CloseIcon";
 import { Link } from "react-router-dom";
+import { Menu } from "@rsuite/icons";
+import Sidebar from "./Sidebar";
 
-const Navbar = (props) => {
-  const [showIcon, setShowIcon] = useState(false);
+const NavbarComp = (props) => {
+  const [showSidebar, setShowSidebar] = useState(false);
   return (
     <>
-      {showIcon ? (
-        <CloseIcon />
+      {showSidebar ? (
+        <Sidebar />
       ) : (
-        <MenuIcon onClick={() => setShowIcon(true)} />
-      )}
-      <div
-        className="container"
-        style={{
-          backgroundColor: props.background || "white",
-          color: props.color || "blue",
-        }}
-      >
-        <div className="logo">Honora</div>
+        <div
+          className="container"
+          style={{
+            backgroundColor: props.background || "white",
+            color: props.color || "blue",
+          }}
+        >
+          <div className="logo">
+            <Link to="/">Honora</Link>
+          </div>
 
-        <div className="links">
-          <Link to="/">Home</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="#services">Services</Link>
+          <div className="links">
+            <Menu
+              className="showMenu"
+              onClick={() => {
+                setShowSidebar(true);
+              }}
+            />
+            <Link to="/">Home</Link>
+            <Link to="/contact">Contact</Link>
+            <Link to="#services">Services</Link>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 };
 
-export default Navbar;
+export default NavbarComp;
