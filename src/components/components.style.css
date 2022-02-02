@@ -133,3 +133,25 @@
   width: 40%;
   height: 20%;
 }
+
+@media screen and (max-width: 600px) {
+  .service__heading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 40px;
+    background: url(../assets/bg.jpg) no-repeat;
+    padding: 12px;
+    background-size: cover;
+    width: 100%;
+  }
+
+  .service__desc {
+    padding: 20px;
+    line-height: 36px;
+  }
+
+  .countup {
+    text-align: center;
+    font-size: 3rem;
+  }
+}

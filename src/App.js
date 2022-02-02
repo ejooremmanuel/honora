@@ -10,17 +10,19 @@ import Messages from "./pages/Messages";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<Homepage />} />
-        <Route exact path="/service/:id" element={<Service />} />
-        <Route exact path="/about" element={<AboutComponent />} />
-        <Route exact path="/contact" element={<Contact />} />
-        <Route exact path="/admin/message" element={<Messages />} />
-      </Routes>
-      <Toaster />
-      <Footer />
-    </Router>
+    <div style={{ width: "100vw", height: "100vh", margin: "auto" }}>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Homepage />} />
+          <Route exact path="/service/:id" element={<Service />} />
+          <Route exact path="/about" element={<AboutComponent />} />
+          <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/admin/message" element={<Messages />} />
+        </Routes>
+        <Toaster />
+        <Footer />
+      </Router>
+    </div>
   );
 }
 

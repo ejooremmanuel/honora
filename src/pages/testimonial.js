@@ -15,6 +15,7 @@ const Testimonial = () => {
         centerMode={true}
         showStatus={false}
         infiniteLoop={true}
+        style={{ width: "100%", height: "100%" }}
       >
         <div className="testimonial__content">
           <p>

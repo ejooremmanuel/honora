@@ -120,8 +120,6 @@ const Contact = () => {
           <textarea
             name=""
             id=""
-            cols="30"
-            rows="10"
             onChange={(e) => {
               setMessage(e.target.value);
             }}
