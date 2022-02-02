@@ -3,7 +3,6 @@ import { getData } from "../services/services";
 
 const Messages = () => {
   const [data, setData] = React.useState([]);
-
   const [loading, setLoading] = React.useState(false);
 
   useEffect(() => {
@@ -16,16 +15,22 @@ const Messages = () => {
 
   return (
     <div>
-      {data.map((dat) => {
-        return (
-          <div key={dat._id}>
-            {dat.name}
-            <p>{dat.message}</p>
-            <p>{dat.company}</p>
-            <p>{dat.email}</p>
-          </div>
-        );
-      })}
+      {loading ? (
+        <div>Loading...</div>
+      ) : (
+        <div>
+          {data.map((dat) => {
+            return (
+              <div key={dat._id}>
+                {dat.name}
+                <p>{dat.message}</p>
+                <p>{dat.company}</p>
+                <p>{dat.email}</p>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </div>
   );
 };
