@@ -12,6 +12,8 @@ export const submitData = (data) => {
       return err.response;
     });
 };
+
+// get data from database
 export const getData = () => {
   return axios
     .get(BASE_URL)
