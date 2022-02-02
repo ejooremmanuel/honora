@@ -352,7 +352,7 @@ table td {
     background-repeat: no-repeat;
     background-size: contain;
     width: 100vw;
-    height: 50vh;
+    height: 40vh;
     padding: 10px;
     justify-items: flex-start;
   }
@@ -387,6 +387,11 @@ table td {
   }
   .about__container__text h1 {
     font-size: 22px;
+  }
+
+  .about__container h1 {
+    color: blue;
+    font-size: 24px;
   }
 
   .about__text p {

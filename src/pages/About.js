@@ -21,10 +21,7 @@ const About = () => {
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt in
             beatae debitis quibusdam non quod quia eius, dignissimos rem magnam
             quis fugit libero id, illo inventore ipsam ab accusantium! Facilis
-            maiores illum molestias iusto corrupti laboriosam! In natus suscipit
-            dolorum, repudiandae quisquam dignissimos perspiciatis beatae
-            ratione debitis illum quas necessitatibus. Lorem, ipsum dolor sit
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt in
+            maiores illum molestias iusto corrupti laboriosam
           </p>
           <Link className="about__link" to="/about">
             Learn More
