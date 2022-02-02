@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
-import { getData } from "../services/services";
+import { getData, deleteData } from "../services/services";
 import {
   TableContainer,
   Paper,
@@ -10,6 +10,8 @@ import {
   TableCell,
   TableHead,
 } from "@mui/material";
+
+import { FaRegTrashAlt } from "react-icons/fa";
 
 const Messages = () => {
   const [data, setData] = React.useState([]);
@@ -45,26 +47,42 @@ const Messages = () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {rows.map((row) => (
-                <TableRow
-                  key={row._id}
-                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                >
-                  <TableCell component="th" scope="row">
-                    {row.name}
-                  </TableCell>
-                  <TableCell align="right">
-                    <a
-                      style={{ textDecoration: "none", color: "black" }}
-                      href={`mailto:${row.email}`}
-                    >
-                      {row.email}
-                    </a>
-                  </TableCell>
-                  <TableCell align="right">{row.company}</TableCell>
-                  <TableCell align="right">{row.message}</TableCell>
+              {rows.length === 0 ? (
+                <TableRow>
+                  <TableCell>No messages yet</TableCell>
                 </TableRow>
-              ))}
+              ) : (
+                <>
+                  {rows.map((row) => (
+                    <TableRow
+                      key={row._id}
+                      sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                    >
+                      <TableCell component="th" scope="row">
+                        {row.name}
+                      </TableCell>
+                      <TableCell align="right">
+                        <a
+                          style={{ textDecoration: "none", color: "black" }}
+                          href={`mailto:${row.email}`}
+                        >
+                          {row.email}
+                        </a>
+                      </TableCell>
+                      <TableCell align="right">{row.company}</TableCell>
+                      <TableCell align="right">{row.message}</TableCell>
+                      <TableCell align="right">
+                        <FaRegTrashAlt
+                          onClick={() => {
+                            deleteData(row._id);
+                          }}
+                          style={{ cursor: "pointer" }}
+                        />
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </>
+              )}
             </TableBody>
           </Table>
         </TableContainer>

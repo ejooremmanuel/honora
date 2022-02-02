@@ -6,7 +6,6 @@ import About from "./About";
 import "./pages.style.css";
 import Services from "./services";
 import Testimonial from "./testimonial";
-
 const Homepage = () => {
   return (
     <div>
