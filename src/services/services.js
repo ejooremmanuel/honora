@@ -3,37 +3,34 @@ import axios from "axios";
 const BASE_URL = "https://honoraback.herokuapp.com/user";
 
 export const submitData = (data) => {
-  return axios
-    .post(BASE_URL, data)
-    .then((data) => {
+  try {
+    return axios.post(BASE_URL, data).then((data) => {
       return data;
-    })
-    .catch((err) => {
-      return err.response;
     });
+  } catch (err) {
+    return err.response;
+  }
 };
 
 // get data from database
 export const getData = () => {
-  return axios
-    .get(BASE_URL)
-    .then((data) => {
+  try {
+    return axios.get(BASE_URL).then((data) => {
       return data;
-    })
-    .catch((err) => {
-      return err.response;
     });
+  } catch (err) {
+    return err.response;
+  }
 };
 // delete data from database
 export const deleteData = (id) => {
   alert("Are you sure you want to delete this message?");
-  return axios
-    .delete(`${BASE_URL}/${id}`)
-    .then((data) => {
+  try {
+    return axios.delete(`${BASE_URL}/${id}`).then((data) => {
       window.location.reload();
       return data;
-    })
-    .catch((err) => {
-      return err.response;
     });
+  } catch (err) {
+    return err.response;
+  }
 };
