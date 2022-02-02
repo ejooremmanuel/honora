@@ -1,5 +1,15 @@
 import React, { useEffect } from "react";
+import Navbar from "../components/Navbar";
 import { getData } from "../services/services";
+import {
+  TableContainer,
+  Paper,
+  Table,
+  TableBody,
+  TableRow,
+  TableCell,
+  TableHead,
+} from "@mui/material";
 
 const Messages = () => {
   const [data, setData] = React.useState([]);
@@ -13,26 +23,53 @@ const Messages = () => {
     });
   }, []);
 
+  const rows = data;
+
   return (
-    <div>
+    <div style={{ marginTop: "50px" }}>
+      <Navbar />
       {loading ? (
         <div>Loading...</div>
       ) : (
-        <div>
-          {data.map((dat) => {
-            return (
-              <div key={dat._id}>
-                {dat.name}
-                <p>{dat.message}</p>
-                <p>{dat.company}</p>
-                <p>{dat.email}</p>
-              </div>
-            );
-          })}
-        </div>
+        <TableContainer
+          component={Paper}
+          style={{ width: "95vw", margin: "30px auto" }}
+        >
+          <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <TableHead>
+              <TableRow>
+                <TableCell>Full Name</TableCell>
+                <TableCell align="right">Email Address</TableCell>
+                <TableCell align="right">Company</TableCell>
+                <TableCell align="right">Message</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {rows.map((row) => (
+                <TableRow
+                  key={row._id}
+                  sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+                >
+                  <TableCell component="th" scope="row">
+                    {row.name}
+                  </TableCell>
+                  <TableCell align="right">
+                    <a
+                      style={{ textDecoration: "none", color: "black" }}
+                      href={`mailto:${row.email}`}
+                    >
+                      {row.email}
+                    </a>
+                  </TableCell>
+                  <TableCell align="right">{row.company}</TableCell>
+                  <TableCell align="right">{row.message}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
       )}
     </div>
   );
 };
-
 export default Messages;
