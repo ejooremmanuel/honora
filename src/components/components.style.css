@@ -53,6 +53,9 @@
   .links a {
     display: none;
   }
+  .showMenu {
+    display: flex;
+  }
 }
 
 /* Single Service */
@@ -158,7 +161,6 @@
   height: 100vh;
   position: fixed;
   background: rgba(0, 0, 255, 0.158);
-
   z-index: 999;
   top: 0;
 }
@@ -174,7 +176,7 @@
   animation-name: sidebar;
   animation-duration: 1s;
   animation-fill-mode: both;
-  padding: 50px;
+  padding: 50px 20px;
 }
 .sidebar__subcontainer a {
   color: #fff;
@@ -195,6 +197,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .service__heading {
     font-size: 1.5rem;
     font-weight: 500;
@@ -214,7 +220,7 @@
   .container {
     position: fixed;
     top: 0;
-
+    width: 95%;
     z-index: 99;
   }
 

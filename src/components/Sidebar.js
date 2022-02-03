@@ -17,18 +17,21 @@ const Sidebar = () => {
           }}
         />
       ) : (
-        <div className="sidebar__container">
-          <div className="sidebar__subcontainer">
-            <Close
-              onClick={() => {
-                setHideBar(!hideBar);
-              }}
-            />
-            <Link to="/about">About</Link>
-            <Link to="/contact">Contact</Link>
-            <Link to="/">Home</Link>
+        <>
+          <div className="sidebar__container">
+            <div className="sidebar__subcontainer">
+              <Close
+                style={{ position: "absolute", top: "10px" }}
+                onClick={() => {
+                  setHideBar(!hideBar);
+                }}
+              />
+              <Link to="/about">About</Link>
+              <Link to="/contact">Contact</Link>
+              <Link to="/">Home</Link>
+            </div>
           </div>
-        </div>
+        </>
       )}
     </>
   );
