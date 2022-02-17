@@ -11,6 +11,7 @@ import {
 } from "react-icons/fa";
 import { submitData } from "../services/services";
 import toast from "react-hot-toast";
+import Footer from "../components/Footer";
 const Contact = () => {
   const [name, setFullName] = useState("");
   const [email, setEmail] = useState("");
@@ -129,6 +130,7 @@ const Contact = () => {
           {loading ? <button>Submitting...</button> : <button>Submit</button>}
         </form>
       </div>
+      <Footer />
     </>
   );
 };

@@ -6,6 +6,7 @@ import AboutComponent from "./components/AboutComponent";
 import Contact from "./pages/contact";
 import { Toaster } from "react-hot-toast";
 import Messages from "./pages/Messages";
+
 // import Chat from "./pages/showMessage";
 
 function App() {
@@ -21,7 +22,6 @@ function App() {
           {/* <Route exact path="/chat" element={<Chat />} /> */}
         </Routes>
         <Toaster />
-        {/* <Footer /> */}
       </Router>
     </div>
   );

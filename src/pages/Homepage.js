@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Counter from "../components/Counter";
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import About from "./About";
 import "./pages.style.css";
@@ -20,6 +21,7 @@ const Homepage = () => {
       <div className="counter__clients">
         <Counter />
       </div>
+      <Footer />
     </div>
   );
 };
