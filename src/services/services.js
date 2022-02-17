@@ -15,7 +15,7 @@ export const submitData = (data) => {
 // get data from database
 export const getData = () => {
   try {
-    return axios.get(BASE_URL).then((data) => {
+    return axios.get(BASE_URL).then(({ data }) => {
       return data;
     });
   } catch (err) {
@@ -26,7 +26,7 @@ export const getData = () => {
 export const deleteData = (id) => {
   alert("Are you sure you want to delete this message?");
   try {
-    return axios.delete(`${BASE_URL}/${id}`).then((data) => {
+    return axios.delete(`${BASE_URL}/${id}`).then(({ data }) => {
       window.location.reload();
       return data;
     });

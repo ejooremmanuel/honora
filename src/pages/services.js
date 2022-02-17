@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Services = (props) => {
   const serviceList = serviceData.map(({ id, heading, desc, icon }) => {
     return (
-      <Link to={`/service/${id}`} key={id}>
+      <Link to={`/our-service/${heading.replace(/\s/g, "-")}/${id}`} key={id}>
         <div className="service">
           <span className="material-icons">{icon}</span>
           <h3>{heading}</h3>
@@ -18,7 +18,7 @@ const Services = (props) => {
 
   return (
     <div id={props.id} className="services__container">
-      <h1>Professional Services</h1>
+      <h1>HONORA CONSULT AT A GLANCE</h1>
       <div className="services">{serviceList}</div>
     </div>
   );

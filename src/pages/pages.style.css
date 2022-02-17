@@ -71,6 +71,7 @@
 .services__container h1 {
   color: blue;
   margin-bottom: 16px;
+  font-size: 16px;
 }
 
 .services {
@@ -630,7 +631,7 @@ table td {
     color: blue;
     margin-bottom: 16px;
     text-align: center;
-    font-size: 24px;
+    font-size: 16px;
   }
 
   body {

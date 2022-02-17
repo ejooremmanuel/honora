@@ -12,18 +12,18 @@ import {
 } from "@mui/material";
 
 import { FaRegTrashAlt } from "react-icons/fa";
+import useFetch from "../customHooks/useFetch";
 
 const Messages = () => {
   const [data, setData] = React.useState([]);
   const [loading, setLoading] = React.useState(false);
+  const res = useFetch(getData);
 
   useEffect(() => {
     setLoading(true);
-    getData().then((res) => {
-      setData(res.data.data);
-      setLoading(false);
-    });
-  }, []);
+    setData(res.data);
+    setLoading(false);
+  }, [res]);
 
   const rows = data;
 

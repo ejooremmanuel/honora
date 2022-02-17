@@ -6,6 +6,7 @@ import AboutComponent from "./components/AboutComponent";
 import Contact from "./pages/contact";
 import { Toaster } from "react-hot-toast";
 import Messages from "./pages/Messages";
+// import Chat from "./pages/showMessage";
 
 function App() {
   return (
@@ -13,10 +14,11 @@ function App() {
       <Router>
         <Routes>
           <Route exact path="/" element={<Homepage />} />
-          <Route exact path="/service/:id" element={<Service />} />
+          <Route exact path="/our-service/:heading/:id" element={<Service />} />
           <Route exact path="/about" element={<AboutComponent />} />
           <Route exact path="/contact" element={<Contact />} />
           <Route exact path="/admin/message" element={<Messages />} />
+          {/* <Route exact path="/chat" element={<Chat />} /> */}
         </Routes>
         <Toaster />
         {/* <Footer /> */}
