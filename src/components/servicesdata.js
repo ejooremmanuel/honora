@@ -3,19 +3,19 @@ const sevicesData = [
     id: "1",
     heading: "Business Process Re-Engineering",
     icon: "engineering",
-    desc: " quaerat earum, quidem molestias, quod quasi hic eius? Modi voluptates placeat laborum impedit possimus consectetur dolorem error. quaerat earum, quidem molestias, quod quasi hic eius? Modi voluptates placeat laborum impedit possimus consectetur dolorem error.",
+    desc: "We re-design the way your work should be done to better support your business goals ",
   },
   {
     id: "2",
     heading: "Cost Management for Operations and Projects",
     icon: "calculate",
-    desc: " quaerat earum, quidem molestias, quod quasi hic eius? Modi voluptates placeat laborum impedit possimus consectetur dolorem error. quaerat earum, quidem molestias, quod quasi hic eius? Modi voluptates placeat laborum impedit possimus consectetur dolorem error.",
+    desc: " We identify and introduce practices that would reduce your business expenses to maximize your organizations profit. ",
   },
   {
     id: "3",
     heading: "Project and Business Funding",
     icon: "euro",
-    desc: " quaerat earum, quidem molestias, quod quasi hic eius? Modi voluptates placeat laborum impedit possimus consectetur dolorem error. quaerat earum, quidem molestias, quod quasi hic eius? Modi voluptates placeat laborum impedit possimus consectetur dolorem error.",
+    desc: " Financial Management and project financing Services to assure the liquidity position of your business.",
   },
   {
     id: "4",
@@ -27,13 +27,13 @@ const sevicesData = [
     id: "5",
     heading: "Financial Sytems and Controls",
     icon: "calculate",
-    desc: " quaerat earum, quidem molestias, quod quasi hic eius? Modi voluptates placeat laborum impedit possimus consectetur dolorem error. quaerat earum, quidem molestias, quod quasi hic eius? Modi voluptates placeat laborum impedit possimus consectetur dolorem error.",
+    desc: " We provide business process and structures that would deliver increased your business efficiency and productivity ",
   },
   {
     id: "6",
     icon: "auto_fix_high",
     heading: "Tax Management",
-    desc: " quaerat earum, quidem molestias, quod quasi hic eius? Modi voluptates placeat laborum impedit possimus consectetur dolorem error. quaerat earum, quidem molestias, quod quasi hic eius? Modi voluptates placeat laborum impedit possimus consectetur dolorem error.",
+    desc: "We proffer advisory services in tax planning and finance management to ensure compliance to the legal tax requirement of the Government",
   },
 ];
 

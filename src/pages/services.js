@@ -10,7 +10,7 @@ const Services = (props) => {
         <div className="service">
           <span className="material-icons">{icon}</span>
           <h3>{heading}</h3>
-          <p>{desc.substring(0, 50)} ...Read more</p>
+          <p>{desc.substring(0, 100)} ...Read more</p>
         </div>
       </Link>
     );

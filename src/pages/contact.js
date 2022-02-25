@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import "./pages.style.css";
-import {
-  FaLinkedin,
-  FaInstagram,
-  FaTwitter,
-  FaFacebook,
-  FaYoutube,
-  FaTiktok,
-} from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaTwitter, FaFacebook } from "react-icons/fa";
 import { submitData } from "../services/services";
 import toast from "react-hot-toast";
 import Footer from "../components/Footer";
@@ -47,9 +40,10 @@ const Contact = () => {
           <div className="contact__map">
             <div className="map"></div>
             <h3>Find Us Here</h3>
-            <span>Address: 4, Lugbe, Lagos Nigeria</span>
+            <span>Address: 5a, Johnson St. Off Coker Rd , Ilupeju Lagos</span>
             <a href="mailto://help@honoraconsult.com">help@honoraconsult.com</a>
-            <a href="tel://+2348142992539">+234 810 0021</a>
+            <a href="tel://+2348024780213 ">+2348024780213 09057029961</a>
+            <a href="tel://+2349057029961 ">+2349057029961</a>
           </div>
 
           <div className="contact__container__details">
@@ -71,16 +65,6 @@ const Contact = () => {
             <a href="https://instagram.com/honoraconsult">
               <span>
                 <FaLinkedin />
-              </span>
-            </a>
-            <a href="https://instagram.com/honoraconsult">
-              <span>
-                <FaYoutube />
-              </span>
-            </a>
-            <a href="https://instagram.com/honoraconsult">
-              <span>
-                <FaTiktok />
               </span>
             </a>
           </div>

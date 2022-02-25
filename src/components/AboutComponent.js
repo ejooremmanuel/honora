@@ -24,13 +24,10 @@ const AboutComponent = () => {
           <div className="about__text">
             <h1 style={{ color: "blue" }}>We are Honora!</h1>
             <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt in
-              beatae debitis quibusdam non quod quia eius, dignissimos rem
-              magnam quis fugit libero id, illo inventore ipsam ab accusantium!
-              Facilis maiores illum molestias iusto corrupti laboriosam! In
-              natus suscipit dolorum, repudiandae quisquam dignissimos
-              perspiciatis beatae ratione debitis illum quas necessitatibus.
-              Lorem, ipsum dolor sit Lorem, ipsum dolor sit amet consectetur
+              Honora Consult is a firm set up to solve hidden problems that may
+              be plaguing your business. We proffer solution to complex
+              situation that may be causing losses and stagnation to growth in
+              Revenue and profit.
             </p>
           </div>
         </div>

@@ -7,10 +7,8 @@ const About = () => {
     <div className="about__container">
       <h1>Who are we?</h1>
       <p className="about__container__text">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta sed
-        reiciendis optio, illum nostrum facere fuga iure aliquid architecto
-        voluptatibus at quidem iusto facilis eveniet, ducimus expedita
-        temporibus exercitationem consectetur?
+        Honora Consult and Services offers you an array of business skills,
+        ideas and direction your business should take to hit those dreams.
       </p>
       <div className="other__details">
         <img src={account} alt="account" />
@@ -18,10 +16,10 @@ const About = () => {
         <div className="about__text">
           <h1>We are Honora!</h1>
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt in
-            beatae debitis quibusdam non quod quia eius, dignissimos rem magnam
-            quis fugit libero id, illo inventore ipsam ab accusantium! Facilis
-            maiores illum molestias iusto corrupti laboriosam
+            Honora Consult is a firm set up to solve hidden problems that may be
+            plaguing your business. We proffer solution to complex situation
+            that may be causing losses and stagnation to growth in Revenue and
+            profit.
           </p>
           <Link className="about__link" to="/about">
             Learn More
