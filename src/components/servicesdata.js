@@ -19,9 +19,9 @@ const sevicesData = [
   },
   {
     id: "4",
-    heading: "Contract and Contracts Agreements",
+    heading: "Asset Leasing and Logistics",
     icon: "article",
-    desc: " quaerat earum, quidem molestias, quod quasi hic eius? Modi voluptates placeat laborum impedit possimus consectetur dolorem error. quaerat earum, quidem molestias, quod quasi hic eius? Modi voluptates placeat laborum impedit possimus consectetur dolorem error.",
+    desc: " We provide lease or rental opportunities for businesses that require same by linking them with asset vendors and funders. We also lease out assets, motorbikes and vehicles for logistics and delivery services.",
   },
   {
     id: "5",

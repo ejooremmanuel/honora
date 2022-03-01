@@ -22,12 +22,24 @@ const AboutComponent = () => {
           />
 
           <div className="about__text">
-            <h1 style={{ color: "blue" }}>We are Honora!</h1>
+            <h1 style={{ color: "blue" }}>Our Team</h1>
             <p>
-              Honora Consult is a firm set up to solve hidden problems that may
-              be plaguing your business. We proffer solution to complex
-              situation that may be causing losses and stagnation to growth in
-              Revenue and profit.
+              Our team is led by Rekhia Abu. She has a proven track record of
+              managing successful finance and accounting functions in the
+              Manufacturing, Service, Investment, Construction and Agricultural
+              sectors. Trained at Akintola Williams Delliote and Touche, She is
+              a Chartered Accountant with the Institute of Chartered Accountants
+              of Nigeria, A fellow with the Institute with over 12years post
+              qualification experience with considerable expertise in
+              negotiations and procurement. She is a qualified Forensic Auditor.
+              A business expert in strategic planning with full P&L
+              responsibilities, she has an analytical mind with optimum
+              Financial Reporting skills. She possesses a solid finance
+              background including Internal Controls and Risk Management, Audit
+              Functions and Credit Control. She is particularly Profit and
+              Results oriented, with strong strategic, innovative and
+              implementation skills coupled with significant experience in
+              motivating, training and leading teams.
             </p>
           </div>
         </div>
