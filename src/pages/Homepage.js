@@ -12,7 +12,7 @@ const Homepage = () => {
     <div>
       <Navbar background="white" color="blue" />
       <div className="herosection">
-        <h1>Better Business with Honora!</h1>
+        <h1 className="animate__bounce">Better Business with Honora!</h1>
         <Link to="/contact">Request a Call</Link>
       </div>
       <About id="about" />
