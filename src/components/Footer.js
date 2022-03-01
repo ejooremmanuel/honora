@@ -40,8 +40,8 @@ const Footer = () => {
         <div className="contact__details">
           <h2>Contact Us</h2>
           <span>Address: 4, Lugbe, Lagos Nigeria</span>
-          <a href="mailto://help@honoraconsult.com">help@honoraconsult.com</a>
-          <a href="tel://+2348142992539">+234 810 0021</a>
+          <a href="tel://+2348024780213 ">+2348024780213</a>
+          <a href="tel://+2349057029961 ">+2349057029961</a>
         </div>
       </div>
       <div className="divider"></div>

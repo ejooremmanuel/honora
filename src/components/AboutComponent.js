@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 import "./components.style.css";
 import account from "../assets/account2.jpg";
 
@@ -41,6 +42,20 @@ const AboutComponent = () => {
               implementation skills coupled with significant experience in
               motivating, training and leading teams.
             </p>
+            <div
+              style={{
+                width: "200px",
+                height: "20px",
+                backgroundColor: "green",
+                padding: "20px",
+                textAlign: "center",
+                color: "white",
+              }}
+            >
+              <Link style={{ color: "white" }} to="/contact">
+                Request a Call
+              </Link>
+            </div>
           </div>
         </div>
       </div>

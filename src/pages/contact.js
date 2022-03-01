@@ -41,8 +41,7 @@ const Contact = () => {
             <div className="map"></div>
             <h3>Find Us Here</h3>
             <span>Address: 5a, Johnson St. Off Coker Rd , Ilupeju Lagos</span>
-            <a href="mailto://help@honoraconsult.com">help@honoraconsult.com</a>
-            <a href="tel://+2348024780213 ">+2348024780213 09057029961</a>
+            <a href="tel://+2348024780213 ">+2348024780213</a>
             <a href="tel://+2349057029961 ">+2349057029961</a>
           </div>
 
